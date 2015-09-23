@@ -1,8 +1,9 @@
 {
-  "title": "Release Notes",
-  "version": "0.10.x",
+  "title": "Manual",
+  "version": "2.1.x",
   "gitbook": ">=2.4.0",
   "language": "en",
+  "theme": "theme",
   "variables": {
       "host": "mybook.com"
   },

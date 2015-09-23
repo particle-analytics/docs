@@ -1,10 +1,13 @@
 {
-  "title": "Release Notes",
+  "title": "Main",
   "version": "0.10.x",
   "gitbook": ">=2.4.0",
   "language": "en",
+  "theme": "theme",
   "variables": {
-      "host": "mybook.com"
+    "host" : {
+      "url": "particle-analytics.github.io/docs"
+    }
   },
   "links": {
     "sharing": {
@@ -15,11 +18,8 @@
       "all": false
     }
   },
-  "plugins": ["mathjax","collapsible-menu"],
+  "plugins": ["collapsible-menu"],
   "pluginsConfig": {
-    "mathjax":{
-        "forceSVG": true
-    },
     "fontSettings": {
         "theme": "white",
         "size": 2
