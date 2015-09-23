@@ -1,0 +1,397 @@
+<!DOCTYPE HTML>
+<html lang="en" >
+    
+    <head>
+        
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <title>Silo Flow | Tutorials</title>
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 2.4.1">
+        
+        
+        <meta name="HandheldFriendly" content="true"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+        <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+        <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+        
+    <link href='http://fonts.googleapis.com/css?family=Roboto:400,300,300italic,700,400italic' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="../gitbook/style.css">
+    <link rel="stylesheet" href="../gitbook/custom.css">
+    <link rel="stylesheet" href="../gitbook/header.css">
+    
+        
+        <link rel="stylesheet" href="../gitbook/plugins/gitbook-plugin-highlight/website.css">
+        
+    
+    
+
+        
+    
+    
+    
+    <link rel="prev" href="../tutorial1/fluidized_bed.html" />
+    
+
+        
+    </head>
+    <body>
+        
+        
+    <div class="header">
+        <div class="container">
+            <div class="group">
+        
+                <div class="header__brand brand"><a href="../../index.html"><img src="../gitbook/Logo_Particle_Analytics.png" alt="Logo"></a></div>
+        
+                <div class="header__navigation">
+                    <div class="navigation_container" role="navigation">
+                        <ul class="navbar initiated">
+        
+                            <li class="navbar__item" role="menuitem"><a href="../../manual/index.html">Manual</a></li>
+                            <li class="navbar__item" role="menuitem"><a href="../../tutorials/index.html">Tutorials</a></li>
+                            <li class="navbar__item" role="menuitem"><a href="../../release_notes/index.html">What's New</a></li>
+                            <li class="navbar__item" role="menuitem"><a href="http://particle-analytics.zendesk.com">Support</a></li>
+        
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="book" data-level="2" data-basepath=".." data-revision="Wed Sep 23 2015 19:33:24 GMT+0100 (BST)">
+    
+
+<div class="book-summary">
+    <div class="book-search" role="search">
+        <input type="text" placeholder="Type to search" class="form-control" />
+    </div>
+    <nav role="navigation">
+        <ul class="summary">
+            
+            
+            
+            
+
+            
+
+            
+    
+        <li class="chapter " data-level="0" data-path="index.html">
+            
+                
+                    <a href="../index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                        Contents
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1" data-path="tutorial1/fluidized_bed.html">
+            
+                
+                    <a href="../tutorial1/fluidized_bed.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.</b>
+                        
+                        Fluidized Bed
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter active" data-level="2" data-path="tutorial2/silo_flow.html">
+            
+                
+                    <a href="../tutorial2/silo_flow.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.</b>
+                        
+                        Silo Flow
+                    </a>
+            
+            
+        </li>
+    
+
+
+            
+            <li class="divider"></li>
+            <li>
+                <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+                    Published with GitBook
+                </a>
+            </li>
+            
+        </ul>
+    </nav>
+</div>
+
+    <div class="book-body">
+        <div class="body-inner">
+            <div class="book-header" role="navigation">
+    <!-- Actions Left -->
+    <a href="#" class="btn pull-left toggle-summary" aria-label="Table of Contents"><i class="fa fa-align-justify"></i></a>
+    <a href="#" class="btn pull-left toggle-search" aria-label="Search"><i class="fa fa-search"></i></a>
+    
+    <div id="font-settings-wrapper" class="dropdown pull-left">
+        <a href="#" class="btn toggle-dropdown" aria-label="Font Settings"><i class="fa fa-font"></i>
+        </a>
+        <div class="dropdown-menu font-settings">
+    <div class="dropdown-caret">
+        <span class="caret-outer"></span>
+        <span class="caret-inner"></span>
+    </div>
+
+    <div class="buttons">
+        <button type="button" id="reduce-font-size" class="button size-2">A</button>
+        <button type="button" id="enlarge-font-size" class="button size-2">A</button>
+    </div>
+
+    <div class="buttons font-family-list">
+        <button type="button" data-font="0" class="button">Serif</button>
+        <button type="button" data-font="1" class="button">Sans</button>
+    </div>
+
+    <div class="buttons color-theme-list">
+        <button type="button" id="color-theme-preview-0" class="button size-3" data-theme="0">White</button>
+        <button type="button" id="color-theme-preview-1" class="button size-3" data-theme="1">Sepia</button>
+        <button type="button" id="color-theme-preview-2" class="button size-3" data-theme="2">Night</button>
+    </div>
+</div>
+
+    </div>
+
+    <!-- Actions Right -->
+    
+
+    
+    
+    
+    
+    
+
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../" >Tutorials</a>
+    </h1>
+</div>
+
+            <div class="page-wrapper" tabindex="-1" role="main">
+                <div class="page-inner">
+                
+                
+                    <section class="normal" id="section-">
+                    
+                        <p><em>Title: Silo flow</em></p>
+<p><em>Author: Pratap Kasina</em></p>
+<p><em>Date: February 2014</em></p>
+<h2 id="introduction">Introduction</h2>
+<p>The objective of this tutorial is to demonstrate how to convert the particle scale data that is generated from DEM to a scale at which the experimental data is usually collected.
+Particle scale data is averaged spatially using coarse graining technique and the
+theoretical background of this technique is discussed in P4 manual. The flow patterns
+of granular solids in flat bottom silo is analysed using P4 in order to validate the model
+by comparing the results with experimental observations.</p>
+<p>The discharge of non-spherical particles in flat bottom silo was simulated using EDEM
+2.5.1 software. The silo is of 40 mm thick with an outlet width of 40 mm as shown
+in Fig 1a. The shape of the particle was modelled as combination of two spheres of
+diameter 3 mm clumped together to give an aspect ratio of 1.25 as shown in Fig.1 (b).
+The silo is centrally filled from the top and the filling is considered to be completed
+when the total kinetic energy of the system reaches below 1E-08 J which is negligible
+when compared to the total K.E of the system during discharge (J). The material is
+them allowed to discharge by removing the outlet plate.</p>
+<p>The data is exported at 200 Hz from EDEM during 20-30 % of material discharged from
+the silo. The results which are time averaged during 20-30 % of material discharged
+from the silo are reported here in the form of contour and graphical plots. The following
+sections describe the procedure to achieve the above mentioned objective with the use of
+GiD software combined with P4 plugin which includes three main steps: pre- processing,
+averaging the data, post processing.</p>
+<p><img src="img/Fig1.png" alt="Screenshot">
+<em>Figure 1: (a) Schematic diagram of flat bottom silo (b) Particle shape</em></p>
+<h2 id="pre-processing">Pre-processing</h2>
+<p>The pre-processing includes creating the geometry of the system followed by discretisation of the domain with one of the various methods available in GiD.</p>
+<p><strong>Create a box</strong></p>
+<ul>
+<li><code>Geometry &#x21D2; Create &#x21D2; Object &#x21D2; Rectangle</code>.</li>
+<li>Specify the corner points of a rectangle: First corner point is (-0.075, 0.04,0) and Second corner point is (0.075,0,0)</li>
+<li>Volume can be created by sweeping the rectangle along Z axis. Select <code>Utilities &#x21D2; Copy</code>. In the Copy window, select Surfaces and Translation from the drop down
+lists next to Entity types and Transformation. Select volumes from the list next to Do Extrude</li>
+<li>The height of extrusion is specified by first point (0, 0, 0) and second point (0, 0, 0.3).</li>
+<li>Click Select button and the click the rectangle in the viewer window and press Escape.</li>
+<li><code>Select Zoom &#x21D2; View &#x21D2; Frame</code> to fit the box in the view window. This can also be accessed directly from the standard tool bar as shown in Fig 2.</li>
+</ul>
+<p><img src="img/Fig2_updated.png" alt="Screenshot">
+<em>Figure 2: Layout of GiD pre-processor</em></p>
+<p><strong>Create lines for graph</strong></p>
+<p>It is recommended to create additional lines in the domain along which the results are expected to plot. This avoids any interpolation of data by GiD while plotting a line
+graph (refer to section 4.5) if there are no nodes on the line. The P4 then calculates the information on the nodes of these lines.</p>
+<p>Having decided the location of lines for graphs it is easy to generate all of them at once by recording a macro while create one line and then edit the same macro to create
+multiple lines in one click. The process in described below:</p>
+<ul>
+<li>Click on record macro button (as shown in Fig 2)</li>
+<li><code>Geometry &#x21D2; Create &#x21D2; Straight line</code>. Input the coordinates of the line from command window as (-0.075, 0.015, 0) and (0.075, 0.015, 0).</li>
+<li><code>Geometry &#x21D2; Edit &#x21D2; Divide &#x21D2; lines &#x21D2; Number of divisions</code>. Enter 20 and click ok. This prompts the user to select lines from the viewer window. Select the line created in step 2 and press escape (In GiD, pressing Escape key ends a command or finishes input definition for any selected function).</li>
+<li>Stop recording the Marco by click the same button. This saves a macro file (displayed next to the record macro button) and right clicks the file and select
+edit widow: copy the first command of the macro multiple times and change the coordinates of the lines in commands. Create four equally spaced lines along Y
+direction at heights of 0.015, 0.045, 0.075, and 0.105 as shown in Fig 3.</li>
+</ul>
+<p><img src="img/Fig3.png" alt="Screenshot"></p>
+<p><em>Figure 3: Problem domain showing the lines for graphs</em></p>
+<p><strong>Meshing</strong></p>
+<p>The volume is meshed with structured tetrahedral elements. The user has also have options to mesh the volumes with other element types including hexahedral and prisms.
+The following procedure demonstrates how to generate structured mesh with tetrahedral elements.</p>
+<p><strong>Define the mesh size</strong></p>
+<p>Select <code>Mesh &#x21D2; Structured &#x21D2; Volumes &#x21D2; Assign number of cells</code>.</p>
+<p>Select the volume by clicking on Cyan coloured boundary (By default, volumes are represented by this colour) with mouse and pressing Escape pops ups Enter value
+window. Specify the number of cells to be assigned along each axis. Enter 20 and click assign and then select any line parallel to X-axis which then automatically selects the
+rest of lines parallel to X-axis and press Escape. Repeat the same procedure and assign 20 and 4 number of cells along Z and Y axis respectively. Close the enter the value
+window after the finishing the assignment.</p>
+<p><strong>Define the element type</strong></p>
+<p>Select <code>Mesh &#x21D2; Element Type &#x21D2; Tetrahedral</code>. This prompts you to select the volumes to assign the tetrahedral elements. Select the volume. Press Escape</p>
+<p><strong>Generate mesh</strong></p>
+<p>Select <code>Mesh &#x21D2; Generate mesh</code>. In the mesh generation window tick the get parameters from the model option and then select OK. This generates the mesh as shown
+Fig 4.</p>
+<p><img src="img/Fig4.png" alt="Screenshot"></p>
+<p><em>Figure 4: Box meshed with tetrahedral elements</em></p>
+<h2 id="analysis-settings">Analysis settings</h2>
+<p>This section describes the definition of parameters required to average the DEM results using P4.
+This includes the specification of which coarse graining function to be used, coarse graining width and cut-off factor (for more details refer P4 manual), the method
+of time averaging and format of output file for saving the data.</p>
+<p>Click on the problem data icon of P4 toolbar as shown in Fig 2 which opens up a problem data window.</p>
+<p>The following values were used for this exercise:</p>
+<p><strong>Input</strong></p>
+<ul>
+<li><code>PARTICLES FILENAME</code> : Read the .p4p file (refer to P4 manual for conversion of DEM data to .p4p)</li>
+<li>Tick Process Contacts Files option.</li>
+<li><code>READING TIME STEP</code> : ALL</li>
+<li><code>STEP FREQUENCY</code> : 1</li>
+</ul>
+<p><strong>Time Averaging</strong></p>
+<ul>
+<li>Activate Time Averaging is checked.</li>
+<li><code>TIME AVERAGE</code> : ALL.</li>
+</ul>
+<p><strong>Spatial Averaging</strong></p>
+<ul>
+<li><code>TYPE</code> : COARSE GRAINING</li>
+<li><code>FUNCTION TYPE</code>: GAUSSIAN</li>
+<li><code>WIDTH</code> : GLOBAL</li>
+<li><code>WIDTH VALUE</code> : 0.0045</li>
+<li><code>CUT-OFF VALUE</code> : 3</li>
+<li><code>SPATIAL INTEGRAL</code> : NO.</li>
+<li><code>CALCULATE GRADIENTS</code> : YES.</li>
+</ul>
+<p><strong>Output</strong></p>
+<ul>
+<li><code>FILE TYPE</code> : GiD Binary</li>
+<li><code>OUTPUT FILE</code> : Other</li>
+<li><code>OUTPUT FILENAME</code> : Give appropriate output file. P4 writes the all data to this file.</li>
+</ul>
+<p>Click on start process as shown in Fig 2 and the progress can be monitored by clicking on information icon next to start process icon. A message pops up on the screen after
+the process is finished. This generates .bin file in the working directory. At this stage, the pre-processing of DEM results is finished and by clicking on the post processing
+icon shown in Fig 2 the GiD switches to post processing mode.</p>
+<h2 id="post-processing">Post-processing</h2>
+<p>This section describes on how to visualise the results using contour plots and graphs.
+GiD has also several other options to visualising the results, for example iso-surfaces, streamlines etc (refer GiD manual for more information).</p>
+<p><strong>Load result file</strong></p>
+<p>Select the result that was generated by clicking on the icon as shown in the Fig.5 and this loads the result file onto the mesh that is created in pre-processing.</p>
+<p><strong>Select the time step for visualisation</strong></p>
+<p>You can select the time step at which results has to be visualised. As in this case, the time averaging has been done for all time steps, only the results at averaged time step
+is available. <code>View Results &#x21D2; Default Analysis/Time step &#x21D2; Time Step</code>. Select the time step for analysing the result. In this case only one time step is displayed.</p>
+<p><strong>Select display style</strong></p>
+<p>There are various options in GiD to display the geometry which are discussed in P4 Manual.
+The display can be customised, for example turning off the mesh elements, turning on/off the other geometric elements. The display of mesh elements and lines
+that are created for graph can be turned off from the <em>SELECT AND DISPLAY STYLE</em> window. The geometric entities present in the domain are displayed as a list in <em>SELECT
+AND DISPLAY STYLE WINDOW</em> and any selected entity can be turned off from display by click on I/O. Similarly the mesh elements can be turned off by selecting the
+solid option for the section ST as shown in Fig 5.</p>
+<p><img src="img/Fig5_updated.png" alt="Screenshot"></p>
+<p><em>Figure 5: Layout of GiD post processor</em></p>
+<p><strong>Visualisation and export contour plots</strong></p>
+<p>The flow patterns at selected time step can be visualised as contour plots of velocity as illustrated below:</p>
+<ul>
+<li><p><code>View Results &#x21D2; Contour Fill &#x21D2; Velocity &#x21D2; Velocity Z</code></p>
+</li>
+<li><p><code>View Results &#x21D2; Contour Fill &#x21D2; Velocity &#x21D2; Velocity X</code></p>
+</li>
+</ul>
+<p><img src="img/Fig6.png" alt="Screenshot"></p>
+<p><em>Figure 6: Contour plot of vertical velocity (m/s)</em></p>
+<p><img src="img/Fig7.png" alt="Screenshot"></p>
+<p><em>Figure 7: Contour plot of horizontal velocity (m/s)</em></p>
+<p>The images can be saved as .tiff format by selecting <code>File &#x21D2; Print to file &#x21D2; Tiff</code>.
+The page settings (size, resolution) for exporting the image can be changed from
+<code>Files &#x21D2; Page and Capture Settings</code>.</p>
+<p>Plot and exporting graphs Similar to the creation of lines as described in section 2.2,
+macros can be recorded for plotting a single graph for a given variable on given line
+along specified direction. The macro can be edited create multiple graphs at multiple
+location on a single click. The procedure for this is as follows:</p>
+<ol>
+<li>Start record macro (as mentioned in section 2.2)</li>
+<li><code>View Results &#x21D2; Line graphs &#x21D2; Set X axis &#x21D2; X variation</code></li>
+<li><code>View Results &#x21D2; Line graphs &#x21D2; Velocity &#x21D2; Velocity Z</code></li>
+<li>Input the coordinates (-0.075, 0.015,0 and 0.075, 0.015, 0) of the line through command window. This generates a graph.</li>
+<li><code>File &#x21D2; Export &#x21D2; Graph &#x21D2; All</code>. This saves the graph as ASCII file which can read into MATLAB or EXCEL.</li>
+<li>Stop record the macro.</li>
+<li>Edit the created macro (displayed next to record macro button) by right clicking on it and select Edit window. Copy paste the first command into subsequent lines
+and change the line definition and the variable name to be plotted.</li>
+</ol>
+<p>The vertical velocity profiles plotted at five different Z locations and at Y= 0 is shown in Fig 8.
+The graph is produced from MATLAB by reading ASCII file generated by running the above created macro.</p>
+<p><img src="img/Fig8.png" alt="Screenshot"></p>
+<p><em>Figure 8: Vertical velocity profiles at different heights from the outlet.</em></p>
+<p><img src="img/Fig9.png" alt="Screenshot"></p>
+<p><em>Figure 9: Horizontal velocity profiles at different heights from the outlet.</em></p>
+
+                    
+                    </section>
+                
+                
+                </div>
+            </div>
+        </div>
+
+        
+        <a href="../tutorial1/fluidized_bed.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page: Fluidized Bed"><i class="fa fa-angle-left"></i></a>
+        
+        
+    </div>
+</div>
+
+        
+<script src="../gitbook/app.js"></script>
+
+    
+    <script src="https://cdn.mathjax.org/mathjax/2.5-latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-mathjax/plugin.js"></script>
+    
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-collapsible-menu/plugin.js"></script>
+    
+
+<script>
+require(["gitbook"], function(gitbook) {
+    var config = {"fontSettings":{"theme":"white","family":"sans","size":2},"mathjax":{"forceSVG":true}};
+    gitbook.start(config);
+});
+</script>
+
+        
+    </body>
+    
+</html>

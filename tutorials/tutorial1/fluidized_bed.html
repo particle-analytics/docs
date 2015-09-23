@@ -1,0 +1,354 @@
+<!DOCTYPE HTML>
+<html lang="en" >
+    
+    <head>
+        
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <title>Fluidized Bed | Tutorials</title>
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 2.4.1">
+        
+        
+        <meta name="HandheldFriendly" content="true"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+        <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+        <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+        
+    <link href='http://fonts.googleapis.com/css?family=Roboto:400,300,300italic,700,400italic' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="../gitbook/style.css">
+    <link rel="stylesheet" href="../gitbook/custom.css">
+    <link rel="stylesheet" href="../gitbook/header.css">
+    
+        
+        <link rel="stylesheet" href="../gitbook/plugins/gitbook-plugin-highlight/website.css">
+        
+    
+    
+
+        
+    
+    
+    <link rel="next" href="../tutorial2/silo_flow.html" />
+    
+    
+    <link rel="prev" href="../index.html" />
+    
+
+        
+    </head>
+    <body>
+        
+        
+    <div class="header">
+        <div class="container">
+            <div class="group">
+        
+                <div class="header__brand brand"><a href="../../index.html"><img src="../gitbook/Logo_Particle_Analytics.png" alt="Logo"></a></div>
+        
+                <div class="header__navigation">
+                    <div class="navigation_container" role="navigation">
+                        <ul class="navbar initiated">
+        
+                            <li class="navbar__item" role="menuitem"><a href="../../manual/index.html">Manual</a></li>
+                            <li class="navbar__item" role="menuitem"><a href="../../tutorials/index.html">Tutorials</a></li>
+                            <li class="navbar__item" role="menuitem"><a href="../../release_notes/index.html">What's New</a></li>
+                            <li class="navbar__item" role="menuitem"><a href="http://particle-analytics.zendesk.com">Support</a></li>
+        
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="book" data-level="1" data-basepath=".." data-revision="Wed Sep 23 2015 19:33:24 GMT+0100 (BST)">
+    
+
+<div class="book-summary">
+    <div class="book-search" role="search">
+        <input type="text" placeholder="Type to search" class="form-control" />
+    </div>
+    <nav role="navigation">
+        <ul class="summary">
+            
+            
+            
+            
+
+            
+
+            
+    
+        <li class="chapter " data-level="0" data-path="index.html">
+            
+                
+                    <a href="../index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                        Contents
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter active" data-level="1" data-path="tutorial1/fluidized_bed.html">
+            
+                
+                    <a href="../tutorial1/fluidized_bed.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.</b>
+                        
+                        Fluidized Bed
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2" data-path="tutorial2/silo_flow.html">
+            
+                
+                    <a href="../tutorial2/silo_flow.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.</b>
+                        
+                        Silo Flow
+                    </a>
+            
+            
+        </li>
+    
+
+
+            
+            <li class="divider"></li>
+            <li>
+                <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+                    Published with GitBook
+                </a>
+            </li>
+            
+        </ul>
+    </nav>
+</div>
+
+    <div class="book-body">
+        <div class="body-inner">
+            <div class="book-header" role="navigation">
+    <!-- Actions Left -->
+    <a href="#" class="btn pull-left toggle-summary" aria-label="Table of Contents"><i class="fa fa-align-justify"></i></a>
+    <a href="#" class="btn pull-left toggle-search" aria-label="Search"><i class="fa fa-search"></i></a>
+    
+    <div id="font-settings-wrapper" class="dropdown pull-left">
+        <a href="#" class="btn toggle-dropdown" aria-label="Font Settings"><i class="fa fa-font"></i>
+        </a>
+        <div class="dropdown-menu font-settings">
+    <div class="dropdown-caret">
+        <span class="caret-outer"></span>
+        <span class="caret-inner"></span>
+    </div>
+
+    <div class="buttons">
+        <button type="button" id="reduce-font-size" class="button size-2">A</button>
+        <button type="button" id="enlarge-font-size" class="button size-2">A</button>
+    </div>
+
+    <div class="buttons font-family-list">
+        <button type="button" data-font="0" class="button">Serif</button>
+        <button type="button" data-font="1" class="button">Sans</button>
+    </div>
+
+    <div class="buttons color-theme-list">
+        <button type="button" id="color-theme-preview-0" class="button size-3" data-theme="0">White</button>
+        <button type="button" id="color-theme-preview-1" class="button size-3" data-theme="1">Sepia</button>
+        <button type="button" id="color-theme-preview-2" class="button size-3" data-theme="2">Night</button>
+    </div>
+</div>
+
+    </div>
+
+    <!-- Actions Right -->
+    
+
+    
+    
+    
+    
+    
+
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../" >Tutorials</a>
+    </h1>
+</div>
+
+            <div class="page-wrapper" tabindex="-1" role="main">
+                <div class="page-inner">
+                
+                
+                    <section class="normal" id="section-">
+                    
+                        <p><em>Title: Analysis of dynamic systems: Fluidized bed</em></p>
+<p><em>Author: Prashant Gupta</em></p>
+<p><em>Date: February 28, 2014</em></p>
+<h2 id="introduction">Introduction</h2>
+<p>This document describes pre and post processing of fluidized bed system using P4 tool developed in University of Edinburgh. Brief description of 3D DEM-CFD simulation is presented in following section, followed by pre and post processing of particle data (DEM). This case study was done as a post processing of validation data. High quality validation experimental data obtained was used for comparisons. Time averaged particle velocity and solid fraction profiles/contours were obtained. This case study would demonstrate how to post process DEM data obtained from simulations to compare against experiments.
+Millimeter size particles are subjected to a fluidizing velocity much greater than minimum fluidization velocity. This leads to transient bubbling/slugging regime. Bubbles are formed around the distributor plate, rise and coalesce and collapse at the free surface of the bed. Hence, bubbling and mixing behavior leads to lower solid fraction in the middle of the bed and lower particle velocities at the walls. Typical snapshot of such a phenomenon can be seen in figure 1.</p>
+<p><img src="img/snapshotbed.png" alt="Screenshot"></p>
+<p><em>Figure 1: Typical snapshot of DEM-CFD simulation of gas-solid fluidized bed with particle size 1.2 mm and density 1000 kg/m at inlet velocity 0.9 m/s</em></p>
+<p><strong>Input:</strong>
+DEM data in this tutorial is extracted from Lammps using dump class available in Lammps-ed version. For more details, refer to the P4 Manual on how to dump data from lammps-ed.</p>
+<p><strong>Output:</strong>
+This tutorial is aimed at explaining meshing required and outputting useful results such as smooth contour plots and line plots for dynamic granular system such as fluidized bed. After this tutorial, Following output would be obtained:</p>
+<ul>
+<li>Smooth contour plots of solid fraction and solid velocities.</li>
+<li>Line plot of these quantities at different heights (as measured in experiments).</li>
+</ul>
+<p>3-D DEM-CFD simulation of a bubbling fluidized bed was done by coupling Lammps and OpenFOAM outputting useful particle data (DEM) at high sampling frequency. Table 1 gives the simulation parameters including particle size, density and domain size.</p>
+<h2 id="pre-processing">Pre-processing</h2>
+<p>Domain of the problem is a pseudo 3-D cuboid which is created according to the simulation parameters given in the table. Idea is to create a rectangular section with x from 0.0 to 0.044 and y from 0.0 to 0.12 and extrude in z direction. This can be done by following these step:</p>
+<ul>
+<li>Create a rectangle by <code>Menu &#x21D2; Geometry &#x21D2; Object &#x21D2; Rectangle</code> and enter first centre point as (0.0 0.0 0.0), ENTER, second point as (0.044 0.12 0.0). Always useful to use zoom frame for a better visibility and fit to the screen.</li>
+<li>Extrude this in Z direction by <code>Menu &#x21D2; Utilities &#x21D2; Copy</code>. From the toolbox select: Entities Type: Surfaces Transformation: Translation First point (0.0 0.0 0.0) and second point (0.0 0.0 0.01). Do extrude Volumes Select. (This will lead to a geometry like figure 2)</li>
+<li>Next step is to mesh the geometry: Regular structured mesh with hexahedral elements will be used in the present example.</li>
+</ul>
+<p>Select <code>Menu &#x21D2; Mesh &#x21D2; Structured &#x21D2; Volume &#x21D2; Assign number of cells</code> and then select the geometry and press esc. Enter number of cells to assign to lines as : 1 and select any line on Z axis, press Esc. proceed with assigning number of cells as 11 in X axis and 40 on Y axis. This defines the spatial scale at which the coarse grained quantities would be calculated.
+To assign elements as hexahedral : Again select <code>Menu &#x21D2; Mesh &#x21D2; Element type &#x21D2; Hexahedra</code> and select the volume, press Esc.</p>
+<p><code>Menu &#x21D2; Mesh &#x21D2; Generate Mesh</code> (or <code>Ctrl-g</code>), press <code>OK</code> &amp; <code>View Mesh</code>. This should look like figure 3. Change view to X-Y.
+Save the project in <code>Menu &#x21D2; File &#x21D2; Save</code>.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Particle Info</th>
+<th style="text-align:left">Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">Number of Particles</td>
+<td style="text-align:left">9240</td>
+</tr>
+<tr>
+<td style="text-align:left">Diameter (mm)</td>
+<td style="text-align:left">1.2</td>
+</tr>
+<tr>
+<td style="text-align:left">Sphericity</td>
+<td style="text-align:left">1</td>
+</tr>
+<tr>
+<td style="text-align:left">Particle Density (kg/m3)</td>
+<td style="text-align:left">1000</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>Geometry</strong></td>
+<td style="text-align:left"><strong>Value</strong></td>
+</tr>
+<tr>
+<td style="text-align:left">Bed width (m)</td>
+<td style="text-align:left">0.044</td>
+</tr>
+<tr>
+<td style="text-align:left">Bed height (m)</td>
+<td style="text-align:left">0.12</td>
+</tr>
+<tr>
+<td style="text-align:left">Bed thickness (m)</td>
+<td style="text-align:left">0.01</td>
+</tr>
+</tbody>
+</table>
+<p><em>Table 1: Particle information</em></p>
+<p><img src="img/geo.png" alt="Screenshot"></p>
+<p><em>Figure 2: Domain for meshing as produced by GiD</em></p>
+<h2 id="p4-settings">P4 settings</h2>
+<p>Dump files are created by lammps as dump.p3p, dump.p3c and dump.p3w as particle definition file, contact data and particle-wall contact data respectively.
+Next P4 toolbox is loaded by going to <code>Data &#x21D2; Problem type &#x21D2; p4-v0.4</code> (whichever is the latest version).
+This will load P4 toolbox.
+Click on the CG preferences button just below P4 symbol.
+Following settings are used in the P4 tool box for present example.</p>
+<p><strong>Input</strong></p>
+<ul>
+<li><code>FILENAME</code>: Browse to the destination of dump.p3p and select.</li>
+<li><code>READ CONTACTS</code>: NO (Not for the present case)</li>
+<li><code>READING TIME STEPS</code>: ALL</li>
+<li><code>STEP FREQUENCY</code>: 1</li>
+<li><code>FILTERING ID</code>: Filter Group ID 3 (these are fixed particles in the simulations for present case)</li>
+</ul>
+<p><img src="img/geo1.png" alt="Screenshot"></p>
+<p><em>Figure 3: Regular structured mesh for post processing</em></p>
+<p><strong>Time Averaging</strong></p>
+<ul>
+<li><code>USE TIME AVERAGE</code>: Yes</li>
+<li><code>TIME AVERAGE</code>: ALL</li>
+</ul>
+<p><strong>Spatial Averaging</strong></p>
+<ul>
+<li><code>TYPE</code>: Binning</li>
+</ul>
+<p><strong>Output</strong></p>
+<ul>
+<li><code>FILE TYPE</code>: GID BINARY is chosen in this particular example.</li>
+<li><code>PRINT PARTICLES</code>: YES option is checked to visualise particles.</li>
+</ul>
+<p>After selecting appropriate settings, press <code>SELECT</code> and save the project file once more. Start process, after finished click on post process. Load the post-process file (.post.bin) from the post processing tool box. Data is now loaded to be visualized. This example primarily brings out time and spatial averaged contour plots of a bubbling fluidized bed.</p>
+<h2 id="post-processing">Post Processing</h2>
+<p>These can be visualized by: Go to <code>Menu &gt; View Results &gt; Smooth Contour Fill &gt; Solid Fraction or Velocity X,Y</code>. This would provide us time averaged smooth contour plots like in figure 4.</p>
+<p><img src="img/time-averaged.png" alt="Screenshot"></p>
+<p><em>Figure 4: Time averaged contour plots of bubbling fluidized beds showing (a) Averaged velocity in axial direction (b) Averaged vertical velocity (c) Averaged solid fraction</em></p>
+<p>For obtaining graph (say a line plot) 5, Use GiD utilities to make line plots at different heights Y = 0.0164 m and 0.0312 m. Go to: <code>Several graphs option &gt; Line graph &gt; Solid fraction</code>. This will prompt to select points, enter coordinates as <em>(0.0, 0.0164)</em> and <em>(0.044, 0.0164)</em> to plot line variation graph at height 0.0164 m. (Refer to GiD manual if more information is required)</p>
+<p><img src="img/line-plots.png" alt="Screenshot"></p>
+<p><em>Figure 5: Line plot variation in axial direction for solid fraction at heights 0.0164 and 0.0312 m</em></p>
+
+                    
+                    </section>
+                
+                
+                </div>
+            </div>
+        </div>
+
+        
+        <a href="../index.html" class="navigation navigation-prev " aria-label="Previous page: Contents"><i class="fa fa-angle-left"></i></a>
+        
+        
+        <a href="../tutorial2/silo_flow.html" class="navigation navigation-next " aria-label="Next page: Silo Flow"><i class="fa fa-angle-right"></i></a>
+        
+    </div>
+</div>
+
+        
+<script src="../gitbook/app.js"></script>
+
+    
+    <script src="https://cdn.mathjax.org/mathjax/2.5-latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-mathjax/plugin.js"></script>
+    
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-collapsible-menu/plugin.js"></script>
+    
+
+<script>
+require(["gitbook"], function(gitbook) {
+    var config = {"fontSettings":{"theme":"white","family":"sans","size":2},"mathjax":{"forceSVG":true}};
+    gitbook.start(config);
+});
+</script>
+
+        
+    </body>
+    
+</html>

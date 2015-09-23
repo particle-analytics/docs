@@ -1,0 +1,926 @@
+<!DOCTYPE HTML>
+<html lang="en" >
+    
+    <head>
+        
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <title>Using P4 with EDEM | Manual</title>
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 2.4.1">
+        
+        
+        <meta name="HandheldFriendly" content="true"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+        <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+        <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+        
+    <link href='http://fonts.googleapis.com/css?family=Roboto:400,300,300italic,700,400italic' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="../gitbook/style.css">
+    <link rel="stylesheet" href="../gitbook/custom.css">
+    <link rel="stylesheet" href="../gitbook/header.css">
+    
+        
+        <link rel="stylesheet" href="../gitbook/plugins/gitbook-plugin-highlight/website.css">
+        
+    
+    
+
+        
+    
+    
+    <link rel="next" href="../post/post_liggghts.html" />
+    
+    
+    <link rel="prev" href="../post/post_view_coarse_graining.html" />
+    
+
+        
+    </head>
+    <body>
+        
+        
+    <div class="header">
+        <div class="container">
+            <div class="group">
+        
+                <div class="header__brand brand"><a href="../../index.html"><img src="../gitbook/Logo_Particle_Analytics.png" alt="Logo"></a></div>
+        
+                <div class="header__navigation">
+                    <div class="navigation_container" role="navigation">
+                        <ul class="navbar initiated">
+        
+                            <li class="navbar__item" role="menuitem"><a href="../../manual/index.html">Manual</a></li>
+                            <li class="navbar__item" role="menuitem"><a href="../../tutorials/index.html">Tutorials</a></li>
+                            <li class="navbar__item" role="menuitem"><a href="../../release_notes/index.html">What's New</a></li>
+                            <li class="navbar__item" role="menuitem"><a href="http://particle-analytics.zendesk.com">Support</a></li>
+        
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="book" data-level="3.6" data-basepath=".." data-revision="Wed Sep 23 2015 19:33:06 GMT+0100 (BST)">
+    
+
+<div class="book-summary">
+    <div class="book-search" role="search">
+        <input type="text" placeholder="Type to search" class="form-control" />
+    </div>
+    <nav role="navigation">
+        <ul class="summary">
+            
+            
+            
+            
+
+            
+
+            
+    
+        <li class="chapter " data-level="0" data-path="index.html">
+            
+                
+                    <a href="../index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                        Contents
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1" data-path="install/installation.html">
+            
+                
+                    <a href="../install/installation.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.</b>
+                        
+                        Installation
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2" data-path="pre/index.html">
+            
+                
+                    <a href="../pre/index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.</b>
+                        
+                        Pre-Processing
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.1" data-path="pre/introduction.html">
+            
+                
+                    <a href="../pre/introduction.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.1.</b>
+                        
+                        Introduction
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2" data-path="pre/settings.html">
+            
+                
+                    <a href="../pre/settings.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.2.</b>
+                        
+                        Settings
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3" data-path="post/index.html">
+            
+                
+                    <a href="../post/index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.</b>
+                        
+                        Post-Processing
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.1" data-path="post/introduction.html">
+            
+                
+                    <a href="../post/introduction.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.1.</b>
+                        
+                        Introduction
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2" data-path="post/post_preprocessing.html">
+            
+                
+                    <a href="../post/post_preprocessing.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.2.</b>
+                        
+                        Preparing post-processing
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.2.1" data-path="post/post_generating_a_model.html">
+            
+                
+                    <a href="../post/post_generating_a_model.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.2.1.</b>
+                        
+                        Generating a model
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2.2" data-path="post/post_processing_options.html">
+            
+                
+                    <a href="../post/post_processing_options.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.2.2.</b>
+                        
+                        Processing options
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.2.2.1" data-path="post/post_processing_options_frame1.html">
+            
+                
+                    <a href="../post/post_processing_options_frame1.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.2.2.1.</b>
+                        
+                        Input
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2.2.2" data-path="post/post_processing_options_frame2.html">
+            
+                
+                    <a href="../post/post_processing_options_frame2.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.2.2.2.</b>
+                        
+                        Time Averaging
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2.2.3" data-path="post/post_processing_options_frame3.html">
+            
+                
+                    <a href="../post/post_processing_options_frame3.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.2.2.3.</b>
+                        
+                        Spatial Averaging
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2.2.4" data-path="post/post_processing_options_frame4.html">
+            
+                
+                    <a href="../post/post_processing_options_frame4.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.2.2.4.</b>
+                        
+                        Output
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2.2.5" data-path="post/post_processing_options_frame5.html">
+            
+                
+                    <a href="../post/post_processing_options_frame5.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.2.2.5.</b>
+                        
+                        Advanced
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2.3" data-path="post/post_assign_geo_and_conditions.html">
+            
+                
+                    <a href="../post/post_assign_geo_and_conditions.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.2.3.</b>
+                        
+                        Assign geometry/surface condition
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2.4" data-path="post/post_notes.html">
+            
+                
+                    <a href="../post/post_notes.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.2.4.</b>
+                        
+                        Notes
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2.5" data-path="post/post_toolbox.html">
+            
+                
+                    <a href="../post/post_toolbox.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.2.5.</b>
+                        
+                        Toolbox
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2.6" data-path="post/post_processing_control.html">
+            
+                
+                    <a href="../post/post_processing_control.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.2.6.</b>
+                        
+                        Processing control
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3" data-path="post/post_postprocessing.html">
+            
+                
+                    <a href="../post/post_postprocessing.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.3.</b>
+                        
+                        After post-processing
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.3.1" data-path="post/post_load_results.html">
+            
+                
+                    <a href="../post/post_load_results.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.3.1.</b>
+                        
+                        Load post-process file
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3.2" data-path="post/post_graph_manager.html">
+            
+                
+                    <a href="../post/post_graph_manager.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.3.2.</b>
+                        
+                        Graph manager
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3.3" data-path="post/post_toolbox_analytics.html">
+            
+                
+                    <a href="../post/post_toolbox_analytics.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.3.3.</b>
+                        
+                        Toolbox for analytrics
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3.4" data-path="post/post_animations.html">
+            
+                
+                    <a href="../post/post_animations.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.3.4.</b>
+                        
+                        Animations tool
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3.5" data-path="post/post_view_modes.html">
+            
+                
+                    <a href="../post/post_view_modes.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.3.5.</b>
+                        
+                        Change view mode
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3.4" data-path="post/post_view_particles.html">
+            
+                
+                    <a href="../post/post_view_particles.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.4.</b>
+                        
+                        Visualizing particles
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.5" data-path="post/post_view_coarse_graining.html">
+            
+                
+                    <a href="../post/post_view_coarse_graining.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.5.</b>
+                        
+                        Visualizing averaged results
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter active" data-level="3.6" data-path="post/post_edem.html">
+            
+                
+                    <a href="../post/post_edem.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.6.</b>
+                        
+                        Using P4 with EDEM
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.7" data-path="post/post_liggghts.html">
+            
+                
+                    <a href="../post/post_liggghts.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.7.</b>
+                        
+                        Using P4 with Liggghts
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="4" data-path="licensing/Licensing.html">
+            
+                
+                    <a href="../licensing/Licensing.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.</b>
+                        
+                        Licensing
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.1" data-path="licensing/particle_analytics_licence.html">
+            
+                
+                    <a href="../licensing/particle_analytics_licence.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.1.</b>
+                        
+                        P4 Licence
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4.2" data-path="licensing/3rd_party_licences.html">
+            
+                
+                    <a href="../licensing/3rd_party_licences.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.2.</b>
+                        
+                        3rd party licences
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+
+            
+            <li class="divider"></li>
+            <li>
+                <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+                    Published with GitBook
+                </a>
+            </li>
+            
+        </ul>
+    </nav>
+</div>
+
+    <div class="book-body">
+        <div class="body-inner">
+            <div class="book-header" role="navigation">
+    <!-- Actions Left -->
+    <a href="#" class="btn pull-left toggle-summary" aria-label="Table of Contents"><i class="fa fa-align-justify"></i></a>
+    <a href="#" class="btn pull-left toggle-search" aria-label="Search"><i class="fa fa-search"></i></a>
+    
+    <div id="font-settings-wrapper" class="dropdown pull-left">
+        <a href="#" class="btn toggle-dropdown" aria-label="Font Settings"><i class="fa fa-font"></i>
+        </a>
+        <div class="dropdown-menu font-settings">
+    <div class="dropdown-caret">
+        <span class="caret-outer"></span>
+        <span class="caret-inner"></span>
+    </div>
+
+    <div class="buttons">
+        <button type="button" id="reduce-font-size" class="button size-2">A</button>
+        <button type="button" id="enlarge-font-size" class="button size-2">A</button>
+    </div>
+
+    <div class="buttons font-family-list">
+        <button type="button" data-font="0" class="button">Serif</button>
+        <button type="button" data-font="1" class="button">Sans</button>
+    </div>
+
+    <div class="buttons color-theme-list">
+        <button type="button" id="color-theme-preview-0" class="button size-3" data-theme="0">White</button>
+        <button type="button" id="color-theme-preview-1" class="button size-3" data-theme="1">Sepia</button>
+        <button type="button" id="color-theme-preview-2" class="button size-3" data-theme="2">Night</button>
+    </div>
+</div>
+
+    </div>
+
+    <!-- Actions Right -->
+    
+
+    
+    
+    
+    
+    
+
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../" >Manual</a>
+    </h1>
+</div>
+
+            <div class="page-wrapper" tabindex="-1" role="main">
+                <div class="page-inner">
+                
+                
+                    <section class="normal" id="section-">
+                    
+                        <h2 id="using-p4-with-edem">Using P4 with EDEM</h2>
+<p>While EDEM has a post-processing tool included in the Analyst, it&#x2019;s abilities are limited. Visualisations
+and movies can be made easily, but the information displayed is limited to particle properties such as
+velocity and angular velocity. Force chain networks are also easily visualised with the option to apply
+colour-maps to the network also.</p>
+<p>The graphing tool is limited to plotting a single value at a time. Checking multiple pieces of data requires
+external post-processing.</p>
+<p>In order to calculate stress, strains and other values for an assembly we use the P4 toolbox.</p>
+<h2 id="data-export">Data Export</h2>
+<p>EDEM currently does not support exporting directly to the P4 file format so data needs to be exported
+from EDEM using a normal .csv file with a specific set of queries to provide the necessary data. Details
+on setting up query configurations can be found in the EDEM manual.</p>
+<p>For spherical particles only the P3 file for particles (.p3p) and for all contacts (.p3c) are required. These
+queries are detailed in A.1. In the case of non-spherical, clustered particles, the ID of the two contacting
+particles is also required for the output. In this case data files of the P4 type are exported. These are
+detailed in A.2 for particles (.p4p), particle-particle contacts (.p4c) and for all particle-geometry contacts
+(.p4w).</p>
+<p>In order to provide the ID for particles in contact, an additional API contact model has been written to
+determine and store the necessary contact data. The <strong>Track_ID API contact model</strong> (available as either a
+windows .dll file or linux .so file) must be loaded for both particle-particle interactions and particle-wall
+interactions to generate P4 file types.</p>
+<blockquote>
+<p>NOTE:
+While it is possible to us the P4 Toolbox for spherical particles using the P3 export configuration,
+that is the simulation is run without the Track_ID API to reduce the simulation run-time, doing
+this may lead to errors. Due to the limitations in the export formatting in EDEM, consistent and/or
+sufficient level of significant figures in the coordinates may lead to the rejection of a certain number
+of contacts when the exported EDEM file is being converted. The P4 converter will automatically
+increase the tolerance to accept all particle-particle and particle-wall contact and display a warning
+message detaining how many ambiguous contacts were found.</p>
+</blockquote>
+<p>The P4 toolbox has the minimum requirement listed in the A.1 and A.2 but also supports additional
+queries. An example of such additional queries is highlighted in A.1 and A.2 where the queries marked
+with an * represent additional queries of interest for particle data If the X, Y and Z components are
+provided, the magnitude will also be calculated and averaged. If all three components are not found the
+items will treated as individual scalars.</p>
+<p><em>Table 1. P3 Export Queries</em></p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">P3P File</th>
+<th style="text-align:left">P3C File</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">Q01:Total Number of Particles:</td>
+<td style="text-align:left">Q01:Total Number of Contacts:</td>
+</tr>
+<tr>
+<td style="text-align:left">Q02:Particle ID:</td>
+<td style="text-align:left">Q02:Contact Vector 1 X:</td>
+</tr>
+<tr>
+<td style="text-align:left">Q03:Particle Volume:</td>
+<td style="text-align:left">Q03:Contact Vector 1 Y:</td>
+</tr>
+<tr>
+<td style="text-align:left">Q04:Particle Mass:</td>
+<td style="text-align:left">Q04:Contact Vector 1 Z:</td>
+</tr>
+<tr>
+<td style="text-align:left">Q05:Particle Position X:</td>
+<td style="text-align:left">Q05:Contact Vector 2 X:</td>
+</tr>
+<tr>
+<td style="text-align:left">Q06:Particle Position Y:</td>
+<td style="text-align:left">Q06:Contact Vector 2 Y:</td>
+</tr>
+<tr>
+<td style="text-align:left">Q07:Particle Position Z:</td>
+<td style="text-align:left">Q07:Contact Vector 2 Z:</td>
+</tr>
+<tr>
+<td style="text-align:left">Q08:Particle Velocity X:</td>
+<td style="text-align:left">Q08:Contact Position X:</td>
+</tr>
+<tr>
+<td style="text-align:left">Q09:Particle Velocity Y:</td>
+<td style="text-align:left">Q09:Contact Position Y:</td>
+</tr>
+<tr>
+<td style="text-align:left">Q10:Particle Velocity Z:</td>
+<td style="text-align:left">Q10:Contact Position Z:</td>
+</tr>
+<tr>
+<td style="text-align:left">*Q11:Particle Angular Velocity X:</td>
+<td style="text-align:left">Q11:Contact Normal Force X:</td>
+</tr>
+<tr>
+<td style="text-align:left">*Q12:Particle Angular Velocity Y:</td>
+<td style="text-align:left">Q12:Contact Normal Force Y:</td>
+</tr>
+<tr>
+<td style="text-align:left">*Q13:Particle Angular Velocity Z:</td>
+<td style="text-align:left">Q13:Contact Normal Force Z:</td>
+</tr>
+<tr>
+<td style="text-align:left"></td>
+<td style="text-align:left">Q14:Contact Tangential Force X:</td>
+</tr>
+<tr>
+<td style="text-align:left"></td>
+<td style="text-align:left">Q15:Contact Tangential Force Y:</td>
+</tr>
+<tr>
+<td style="text-align:left"></td>
+<td style="text-align:left">Q16:Contact Tangential Force Z:</td>
+</tr>
+</tbody>
+</table>
+<p><em>Table 2. P4 Export Queries</em></p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">P4P File</th>
+<th style="text-align:left">P4C File</th>
+<th style="text-align:left">P4W File</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">Q01:Total Number of Particles:</td>
+<td style="text-align:left">Q01:Total Number of Contacts:</td>
+<td style="text-align:left">Q01:Total Number of Contacts:</td>
+</tr>
+<tr>
+<td style="text-align:left">Q02:Particle ID:</td>
+<td style="text-align:left">Q02:Contact IDfirst:</td>
+<td style="text-align:left">Q02:Contact IDfirst:</td>
+</tr>
+<tr>
+<td style="text-align:left">Q03:Particle Volume:</td>
+<td style="text-align:left">Q03:Contact IDsecond:</td>
+<td style="text-align:left">Q03:Contact Position X:</td>
+</tr>
+<tr>
+<td style="text-align:left">Q04:Particle Mass:</td>
+<td style="text-align:left">Q04:Contact Position X:</td>
+<td style="text-align:left">Q04:Contact Position Y:</td>
+</tr>
+<tr>
+<td style="text-align:left">Q05:Particle Position X:</td>
+<td style="text-align:left">Q05:Contact Position Y:</td>
+<td style="text-align:left">Q05:Contact Position Z:</td>
+</tr>
+<tr>
+<td style="text-align:left">Q06:Particle Position Y:</td>
+<td style="text-align:left">Q06:Contact Position Z:</td>
+<td style="text-align:left">Q06:Contact Normal Force X:</td>
+</tr>
+<tr>
+<td style="text-align:left">Q07:Particle Position Z:</td>
+<td style="text-align:left">Q07:Contact Normal Force X:</td>
+<td style="text-align:left">Q07:Contact Normal Force Y:</td>
+</tr>
+<tr>
+<td style="text-align:left">Q08:Particle Velocity X:</td>
+<td style="text-align:left">Q08:Contact Normal Force Y:</td>
+<td style="text-align:left">Q08:Contact Normal Force Z:</td>
+</tr>
+<tr>
+<td style="text-align:left">Q09:Particle Velocity Y:</td>
+<td style="text-align:left">Q09:Contact Normal Force Z:</td>
+<td style="text-align:left">Q09:Contact Tangential Force X:</td>
+</tr>
+<tr>
+<td style="text-align:left">Q10:Particle Velocity Z:</td>
+<td style="text-align:left">Q10:Contact Tangential Force X:</td>
+<td style="text-align:left">Q10:Contact Tangential Force Y:</td>
+</tr>
+<tr>
+<td style="text-align:left">*Q11:Particle Angular Velocity X:</td>
+<td style="text-align:left">Q11:Contact Tangential Force Y:</td>
+<td style="text-align:left">Q11:Contact Tangential Force Z:</td>
+</tr>
+<tr>
+<td style="text-align:left">*Q12:Particle Angular Velocity Y:</td>
+<td style="text-align:left">Q12:Contact Tangential Force Z:</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">*Q13:Particle Angular Velocity Z:</td>
+<td style="text-align:left"></td>
+</tr>
+</tbody>
+</table>
+<h2 id="file-conversion">File Conversion</h2>
+<p>In order to carry out post-processing with the P4 Toolbox, the data exported from EDEM needs to be
+converted into the file format used by the P4 Toolbox. The P4 toolbox comes with an inbuilt converter
+which converts the .csv files exported from EDEM to the required P3 or P4 files for use in the toolbox.
+The converter can be selected as shown in 3.1. Upon selection, the option to convert to either P3 or P4
+files is displayed in the <em>P4 toolbox</em> submenu as:</p>
+<p><img src="img/post_edem_converter_submenu.png" alt="Alt Text" title="Example of P4 Toolbox within GiD"></p>
+<p>Selecting either option displays an input box such as those presented in A where the EDEM input files
+and P3/P4 output files are specified. Once the files have been correctly selected, the conversion process
+is started by pressing the convert button. Pressing the convert button will open the info window (A),
+which provides details of the conversion for each timestep as the files are being processed.</p>
+<p><img src="img/post_edem_converter_windows.png" alt="Alt Text" title="Example of P4 Toolbox within GiD"></p>
+<p>Once the files have been converted to the P3/P4 file format, the data can then be used with the P4 Toolbox
+for advanced post-processing of the data. Calculation and post-processing of the data can only take place
+if a mesh of nodes has been created within GiD. This will be discussed in the following section.</p>
+<blockquote>
+<p>NOTE:</p>
+<p>During the file conversion process, it is possible that some contacts will be rejected such as shown
+in the file conversion Info window. However, only contacts that occur between virtual-virtual
+particles and virtual particles-geometry will be rejected. Virtual particles are generated in the case
+where periodic boundaries are employed in the simulation and this is the only time contacts should
+be rejected.</p>
+</blockquote>
+<p><img src="img/post_edem_converter_info.png" alt="Alt Text" title="Example of P4 Toolbox within GiD"></p>
+<p><em>EDEM to P3/P4 file converter info window</em></p>
+
+                    
+                    </section>
+                
+                
+                </div>
+            </div>
+        </div>
+
+        
+        <a href="../post/post_view_coarse_graining.html" class="navigation navigation-prev " aria-label="Previous page: Visualizing averaged results"><i class="fa fa-angle-left"></i></a>
+        
+        
+        <a href="../post/post_liggghts.html" class="navigation navigation-next " aria-label="Next page: Using P4 with Liggghts"><i class="fa fa-angle-right"></i></a>
+        
+    </div>
+</div>
+
+        
+<script src="../gitbook/app.js"></script>
+
+    
+    <script src="https://cdn.mathjax.org/mathjax/2.5-latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-mathjax/plugin.js"></script>
+    
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-collapsible-menu/plugin.js"></script>
+    
+
+<script>
+require(["gitbook"], function(gitbook) {
+    var config = {"fontSettings":{"theme":"white","family":"sans","size":2},"mathjax":{"forceSVG":true}};
+    gitbook.start(config);
+});
+</script>
+
+        
+    </body>
+    
+</html>
