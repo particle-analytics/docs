@@ -1,7 +1,8 @@
 # Summary
 
-* [Contents](README.md)
-* [Installation](install/installation.md)
+* [Home](README.md)
+* [Getting Started](intro/index.md)
+   * [Installation](intro/installation.md)
 * [Pre-Processing](pre/index.md)
    * [Introduction](pre/introduction.md)
    * [Settings](pre/settings.md)
